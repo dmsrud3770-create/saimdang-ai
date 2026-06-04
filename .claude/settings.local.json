@@ -6,7 +6,13 @@
       "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\" -Recurse -File | ForEach-Object { $lines = \\(Get-Content $_.FullName | Where-Object { $_.Trim\\(\\) -ne \"\" }\\).Count; \"$\\($_.Name\\) — 내용 $lines 줄\" })",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Read(//c/Users/User/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/d4f57c36-5ba9-467c-9b7f-642c94c02cd5/06e8915a-deb1-46c0-9c86-3675e0d74553/skills/xlsx/**)",
+      "Bash(python -c ' *)",
+      "Bash(where python *)",
+      "PowerShell(python --version)",
+      "PowerShell(python -c \"import pandas; print\\(pandas.__version__\\)\")",
+      "Bash(cp \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\작가 GPT에게 새로 넣어줄 좋아했던대본 35f6faa334dc80ccae86c2a9b6b36007.md\" \"C:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\\\\성장데이터\\\\서사임당_대본스타일_마스터.md\")"
     ]
   }
 }
