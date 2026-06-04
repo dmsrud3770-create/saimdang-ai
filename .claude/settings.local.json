@@ -13,7 +13,8 @@
       "PowerShell(python --version)",
       "PowerShell(python -c \"import pandas; print\\(pandas.__version__\\)\")",
       "Bash(cp \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\작가 GPT에게 새로 넣어줄 좋아했던대본 35f6faa334dc80ccae86c2a9b6b36007.md\" \"C:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\\\\성장데이터\\\\서사임당_대본스타일_마스터.md\")",
-      "Bash(cp \"C:\\\\Users\\\\User\\\\Downloads\\\\리킷\\\\리킷 풀내용\\\\리킷 풀내용.md\" \"C:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\\\\성장데이터\\\\리킷_마케팅바이블.md\")"
+      "Bash(cp \"C:\\\\Users\\\\User\\\\Downloads\\\\리킷\\\\리킷 풀내용\\\\리킷 풀내용.md\" \"C:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\\\\성장데이터\\\\리킷_마케팅바이블.md\")",
+      "Bash(cp \"C:\\\\Users\\\\User\\\\Desktop\\\\RE FEEEL 기반 GPT 지식 창고 v1 35e6faa334dc8066a2b1dbc5dcd969e3.md\" \"C:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\\\\성장데이터\\\\리필_브랜딩철학바이블.md\")"
     ]
   }
 }
