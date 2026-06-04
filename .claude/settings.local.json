@@ -17,7 +17,8 @@
       "Bash(cp \"C:\\\\Users\\\\User\\\\Desktop\\\\RE FEEEL 기반 GPT 지식 창고 v1 35e6faa334dc8066a2b1dbc5dcd969e3.md\" \"C:\\\\Users\\\\User\\\\클로드코드\\\\나만의 비서팀\\\\성장데이터\\\\리필_브랜딩철학바이블.md\")",
       "Read(//c/Users/User/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/d4f57c36-5ba9-467c-9b7f-642c94c02cd5/06e8915a-deb1-46c0-9c86-3675e0d74553/skills/docx/**)",
       "Bash(extract-text \"C:\\\\Users\\\\User\\\\Documents\\\\카카오톡 받은 파일\\\\서사임당.docx\")",
-      "Bash(pandoc \"C:\\\\Users\\\\User\\\\Documents\\\\카카오톡 받은 파일\\\\서사임당.docx\" -t plain)"
+      "Bash(pandoc \"C:\\\\Users\\\\User\\\\Documents\\\\카카오톡 받은 파일\\\\서사임당.docx\" -t plain)",
+      "WebSearch"
     ]
   }
 }
