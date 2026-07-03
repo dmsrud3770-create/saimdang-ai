@@ -58,7 +58,7 @@
     }
     .btn:hover{background:var(--btn-hover);transform:translateY(-2px)}
     .btn.gold{background:var(--btn);color:var(--btn-text);border-color:var(--btn)}
-    .btn.ghost{background:transparent;color:var(--brown);border-color:var(--line);box-shadow:none}
+    .btn.ghost{background:transparent;color:var(--brown);border:2px solid var(--brown2);box-shadow:none;font-weight:700}
     .hero{padding:52px 0 38px}
     .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
     .eyebrow{
@@ -72,9 +72,9 @@
     .lead strong{color:var(--brown);font-weight:700}
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
     .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
-    .proof .item{background:var(--paper);border:1px solid var(--line);padding:14px 14px;border-radius:16px;box-shadow:0 4px 14px rgba(55,33,20,.05)}
-    .proof b{display:block;font-size:16px;letter-spacing:-.02em;font-weight:800}
-    .proof span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+    .proof .item{background:var(--paper);border:1px solid var(--line);padding:12px 14px;border-radius:16px;box-shadow:0 4px 14px rgba(55,33,20,.05)}
+    .proof b{display:block;font-size:18px;letter-spacing:-.03em;font-weight:900;color:var(--brown)}
+    .proof span{display:block;color:var(--muted);font-size:11px;margin-top:3px;line-height:1.4}
     /* Director 프로필 카드 */
     .director-card{
       display:flex;align-items:center;gap:14px;
@@ -185,10 +185,11 @@
       .hero-grid,.grid-2,.grid-3,.photo-wall,.portfolio-grid,.video-grid,.plans{grid-template-columns:1fr}
       .hero{padding:42px 0 26px}
       .hero-visual,.hero-visual img{min-height:420px}
-      .proof{grid-template-columns:1fr}
+      .proof{grid-template-columns:repeat(3,1fr)}
       .before-after{grid-template-columns:1fr}
       .arrow{transform:none;padding:8px 0}
       .sense-list{grid-template-columns:1fr 1fr}
+      .design-steps{grid-template-columns:1fr 1fr}
       .photo-large{min-height:420px}
       section{padding:54px 0}
       .pdf-box{display:block}
@@ -196,11 +197,15 @@
     }
     @media(max-width:520px){
       .wrap{width:min(100% - 24px,1120px)}
-      h1{font-size:36px;line-height:1.16}
-      .lead{font-size:16px;line-height:1.82}
+      h1{font-size:34px;line-height:1.16}
+      .lead{font-size:15px;line-height:1.82}
       .sense-list,.photo-stack{grid-template-columns:1fr}
+      .sense{padding:12px 14px}
+      .design-steps{grid-template-columns:1fr}
       .hero-actions .btn{width:100%}
       .big-copy{padding:30px;border-radius:26px}
+      .proof b{font-size:15px}
+      .proof span{font-size:10px}
     }
   </style>
 </head>
@@ -254,8 +259,8 @@
           </div>
           <div class="proof">
             <div class="item"><b>2,500+</b><span>라이브 실전 경험</span></div>
-            <div class="item"><b>식품·건기식</b><span>핵심 카테고리</span></div>
-            <div class="item"><b>One-stop</b><span>기획·대본·진행</span></div>
+            <div class="item"><b>식품·건기식</b><span>오감형 라이브 설계</span></div>
+            <div class="item"><b>One-stop</b><span>기획·대본·진행·송출</span></div>
           </div>
         </div>
         <div class="hero-visual" id="heroSlider">
