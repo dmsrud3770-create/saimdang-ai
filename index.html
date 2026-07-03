@@ -153,7 +153,11 @@
     .vod-btn{display:inline-block;margin-top:auto;padding:9px 18px;background:var(--btn);color:var(--btn-text);border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:-.01em;transition:background .2s}
     .vod-btn:hover{background:var(--btn-hover)}
     .vod-footer-note{text-align:center;margin-top:28px;font-size:13px;color:var(--muted);letter-spacing:-.01em}
-    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+    .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
+    #shift .section-title{line-height:1.12;font-weight:900;letter-spacing:-.045em}
+    #shift .section-title .highlight{display:block;font-size:1.12em;font-weight:950;color:var(--brown)}
+    #shift li strong{font-weight:900;color:var(--brown)}
+    .proof{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
     .trust-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
     .trust-icon{font-size:28px;margin-bottom:12px}
     .trust-card h3{margin:0 0 10px;font-size:16px;font-weight:800;color:var(--brown);letter-spacing:-.02em}
@@ -196,7 +200,8 @@
       .arrow{transform:none;padding:8px 0}
       .sense-list{grid-template-columns:1fr 1fr}
       .design-steps{grid-template-columns:1fr 1fr}
-      .trust-grid{grid-template-columns:1fr}
+      .trust-grid{grid-template-columns:1fr 1fr}
+      .proof{grid-template-columns:repeat(3,1fr)}
       .photo-large{min-height:420px}
       section{padding:54px 0}
       .pdf-box{display:block}
@@ -211,8 +216,10 @@
       .design-steps{grid-template-columns:1fr}
       .hero-actions .btn{width:100%}
       .big-copy{padding:30px;border-radius:26px}
-      .proof b{font-size:15px}
+      .proof{grid-template-columns:repeat(2,1fr)}
+      .proof b{font-size:14px}
       .proof span{font-size:10px}
+      .trust-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -266,8 +273,10 @@
           </div>
           <div class="proof">
             <div class="item"><b>2,500+</b><span>라이브 실전 경험</span></div>
+            <div class="item"><b>기관 프로젝트</b><span>공공기관·지자체·농협</span></div>
             <div class="item"><b>식품·건기식</b><span>오감형 라이브 설계</span></div>
             <div class="item"><b>One-stop</b><span>기획·대본·진행·송출</span></div>
+            <div class="item"><b>Since 2019</b><span>6년차 라이브커머스</span></div>
           </div>
         </div>
         <div class="hero-visual" id="heroSlider">
@@ -317,7 +326,7 @@
       <div class="wrap">
         <div class="section-head">
           <div class="kicker">라이브 설계 방식</div>
-          <h2>방송 횟수보다 중요한 건<br/>고객이 멈추는 장면입니다</h2>
+          <h2 class="section-title">방송 횟수보다 중요한 건<br/><span class="highlight">고객이 멈추는 장면입니다</span></h2>
           <p class="desc">
             서사임당 LIVE는 단순히 방송을 진행하는 데서 끝나지 않습니다.<br/>
             상품 설명, 화면 구성, 대본, 카메라 동선을 고객이 이해하고 구매를 결정하는 순서로 설계합니다.
@@ -340,10 +349,10 @@
           <div class="ba" style="border:2px solid var(--mustard);background:linear-gradient(160deg,#FFFDF7,#FFF8E6);box-shadow:0 12px 32px rgba(217,152,30,.15)">
             <h3 style="font-weight:800;font-size:16px;color:var(--brown)">서사임당 LIVE 설계 방식</h3>
             <ul>
-              <li>상품이 먼저 눈에 들어오는 장면 구성</li>
-              <li>오감 대본과 카메라 동선을 함께 설계</li>
-              <li>VOD와 숏폼으로 활용 가능한 장면 확보</li>
-              <li>고객이 구매 이유를 자연스럽게 이해하도록 구성</li>
+              <li><strong>상품이 먼저 눈에 들어오는 장면</strong> 구성</li>
+              <li><strong>오감 대본과 카메라 동선</strong>을 함께 설계</li>
+              <li><strong>VOD와 숏폼으로 활용 가능한 장면</strong> 확보</li>
+              <li>고객이 <strong>구매 이유를 자연스럽게 이해</strong>하도록 구성</li>
             </ul>
           </div>
         </div>
@@ -628,24 +637,30 @@
           <h2>공공기관과 브랜드가 선택한<br/>라이브커머스 파트너</h2>
           <p class="desc">서사임당 LIVE는 단순 쇼호스트 섭외를 넘어<br/>지역 상품, 식품, 시즌 상품, 브랜드 라이브를 기획부터 진행까지 함께 운영해왔습니다.</p>
         </div>
-        <div class="trust-grid">
+        <div class="trust-grid" style="grid-template-columns:repeat(2,1fr)">
           <div class="trust-card">
             <div class="trust-icon">🏛</div>
-            <h3>공공기관·지자체 프로젝트</h3>
-            <p>지역 소상공인과 브랜드 상품을 라이브커머스에 맞게 기획하고 진행했습니다.</p>
-            <div class="trust-example">안산시 상권활성화재단 · 지역 소상공인 라이브커머스</div>
+            <h3>안산시 상권활성화재단</h3>
+            <p>지역 소상공인 상품 라이브커머스 프로젝트 기획 및 진행</p>
+            <div class="trust-example">공공기관·지자체 프로젝트 · 지역 소상공인 라이브커머스</div>
           </div>
           <div class="trust-card">
             <div class="trust-icon">🌾</div>
-            <h3>농협·지역몰 상품 라이브</h3>
-            <p>농산물, 식품, 지역 특산물의 산지 이야기와 구매 포인트를 방송 순서로 풀어냈습니다.</p>
-            <div class="trust-example">아산맑은몰 · 농협 연계 상품 · 식품·농산물·시즌 상품</div>
+            <h3>아산맑은몰 · 농협 연계 상품</h3>
+            <p>농산물·지역 특산물 라이브 기획 및 진행</p>
+            <div class="trust-example">농협 연계 상품 · 식품·농산물·시즌 상품 라이브</div>
           </div>
           <div class="trust-card">
             <div class="trust-icon">📺</div>
-            <h3>누적 2,500회+ 실전 경험</h3>
-            <p>다양한 상품군을 직접 진행하며 고객 반응과 구매 장면을 현장에서 쌓아왔습니다.</p>
+            <h3>누적 라이브 2,500회+</h3>
+            <p>식품·건기식·뷰티·생활용품까지 실전 송출 경험</p>
             <div class="trust-example">네이버 쇼핑라이브 2,000회+ · 쿠팡 공식 추천 크리에이터</div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">⚙️</div>
+            <h3>One-stop 운영</h3>
+            <p>기획·대본·화면 구성·진행·송출까지 한 번에 진행</p>
+            <div class="trust-example">식품·건기식 중심 · 뷰티·생활용품·지역상품까지 확장</div>
           </div>
         </div>
       </div>
