@@ -236,13 +236,46 @@
             <div class="item"><b>One-stop</b><span>기획·대본·진행</span></div>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src='live_nutrione.jpg.png' alt='서사임당 라이브 연출 사례' />
+        <div class="hero-visual" id="heroSlider">
+          <img src='live_nutrione.jpg.png' alt='서사임당 라이브 연출 사례' id="heroImg" />
           <div class="hero-note">
             <b>브랜드마다 다른 오감형 연출</b>
             <span>식품 · 건기식 · 뷰티 · 생활용품까지</span>
           </div>
+          <div style="position:absolute;bottom:80px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10" id="heroDots"></div>
         </div>
+        <script>
+          const slides = [
+            'live_nutrione.jpg.png',
+            'live_bluemartin.jpg.png',
+            'live_dermagen.jpg.png',
+            'live_cono.jpg.jpg',
+            'live_grdc.jpg.png',
+            'live.lalamarket.jpg.png',
+            'live.orgarbonbaby.jpg.png',
+            'live.playclean.jpg.png',
+            'live.recipebox.jpg.png',
+            'live.recipebox-kidsday.jpg.png'
+          ];
+          let cur = 0;
+          const img = document.getElementById('heroImg');
+          const dotsWrap = document.getElementById('heroDots');
+          slides.forEach((_, i) => {
+            const d = document.createElement('div');
+            d.style.cssText = 'width:7px;height:7px;border-radius:50%;background:rgba(255,253,247,.5);cursor:pointer;transition:.3s';
+            d.onclick = () => go(i);
+            dotsWrap.appendChild(d);
+          });
+          function go(n) {
+            cur = (n + slides.length) % slides.length;
+            img.style.opacity = '0';
+            setTimeout(() => { img.src = slides[cur]; img.style.opacity = '1'; }, 300);
+            [...dotsWrap.children].forEach((d, i) => d.style.background = i === cur ? 'rgba(255,253,247,.95)' : 'rgba(255,253,247,.5)');
+          }
+          img.style.transition = 'opacity .3s';
+          go(0);
+          setInterval(() => go(cur + 1), 3500);
+        </script>
       </div>
     </section>
 
