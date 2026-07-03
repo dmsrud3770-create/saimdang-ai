@@ -7,17 +7,21 @@
   <meta name="description" content="서사임당 LIVE는 식품·건강기능식품·신선식품 브랜드를 위한 오감형 라이브 연출, 기획, 대본, 송출, 진행을 제공합니다." />
   <style>
     :root {
-      --ivory:#FBF4E6;
-      --paper:#FFFDF7;
-      --brown:#372114;
-      --brown2:#6A4A35;
-      --mustard:#D9981E;
-      --mustard2:#F2C35B;
-      --line:#E6D2AD;
-      --muted:#806B58;
-      --card:#FFF8EA;
-      --soft:#F4E4C4;
-      --shadow:0 22px 60px rgba(55,33,20,.13);
+      --ivory:#F8F0E3;
+      --paper:#FFFCF6;
+      --section:#FFF8EC;
+      --brown:#2B1608;
+      --brown2:#5B3A24;
+      --mustard:#D9901F;
+      --mustard2:#B96F12;
+      --line:#E8C98E;
+      --muted:#8A725F;
+      --card:#FFFCF6;
+      --soft:#F8F0E3;
+      --btn:#3A210F;
+      --btn-hover:#2B1608;
+      --btn-text:#FFF8EC;
+      --shadow:0 12px 30px rgba(91,58,36,.10);
       --radius:26px;
     }
     *{box-sizing:border-box}
@@ -35,9 +39,9 @@
     .wrap{width:min(1120px,calc(100% - 34px));margin:0 auto}
     .topbar{
       position:sticky;top:0;z-index:30;
-      background:rgba(251,244,230,.88);
+      background:rgba(248,240,227,.92);
       backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(230,210,173,.82);
+      border-bottom:1px solid rgba(232,201,142,.7);
     }
     .nav{height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.04em}
@@ -48,12 +52,12 @@
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:7px;
       padding:11px 16px;border-radius:999px;font-weight:700;font-size:14px;
-      background:var(--brown);color:white;border:1px solid var(--brown);
-      box-shadow:0 6px 18px rgba(55,33,20,.14);
+      background:var(--btn);color:var(--btn-text);border:1px solid var(--btn);
+      box-shadow:0 6px 18px rgba(58,33,15,.18);
       transition:.16s ease;
     }
-    .btn:hover{transform:translateY(-2px)}
-    .btn.gold{background:var(--mustard);color:var(--brown);border-color:var(--mustard)}
+    .btn:hover{background:var(--btn-hover);transform:translateY(-2px)}
+    .btn.gold{background:var(--btn);color:var(--btn-text);border-color:var(--btn)}
     .btn.ghost{background:transparent;color:var(--brown);border-color:var(--line);box-shadow:none}
     .hero{padding:52px 0 38px}
     .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
@@ -146,8 +150,8 @@
     .step-card p{margin:0;font-size:13px;color:var(--brown2);line-height:1.85}
     .vod-title{margin:0;font-size:15px;font-weight:700;letter-spacing:-.02em;line-height:1.5;color:var(--brown)}
     .vod-desc{margin:0;font-size:13px;color:var(--brown2);line-height:1.8;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-    .vod-btn{display:inline-block;margin-top:auto;padding:9px 18px;background:var(--brown);color:#fff;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:-.01em;transition:background .2s}
-    .vod-btn:hover{background:var(--mustard2)}
+    .vod-btn{display:inline-block;margin-top:auto;padding:9px 18px;background:var(--btn);color:var(--btn-text);border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:-.01em;transition:background .2s}
+    .vod-btn:hover{background:var(--btn-hover)}
     .vod-footer-note{text-align:center;margin-top:28px;font-size:13px;color:var(--muted);letter-spacing:-.01em}
     .quote{border-left:3px solid var(--mustard);padding:6px 0 6px 16px;font-size:15px;font-weight:700;letter-spacing:-.02em;line-height:1.6;color:var(--brown2)}
     .process{display:grid;gap:10px}
