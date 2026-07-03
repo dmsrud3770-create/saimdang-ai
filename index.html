@@ -153,6 +153,12 @@
     .vod-btn{display:inline-block;margin-top:auto;padding:9px 18px;background:var(--btn);color:var(--btn-text);border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:-.01em;transition:background .2s}
     .vod-btn:hover{background:var(--btn-hover)}
     .vod-footer-note{text-align:center;margin-top:28px;font-size:13px;color:var(--muted);letter-spacing:-.01em}
+    .recommend-list{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+    .recommend-item{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px 22px;display:flex;align-items:flex-start;gap:14px;box-shadow:var(--shadow)}
+    .rec-icon{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--mustard);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+    .recommend-item-text{font-size:15px;line-height:1.55;color:var(--brown)}
+    .recommend-item-text strong{font-weight:700;display:block;margin-bottom:3px}
+    .rec-sub{font-size:13px;color:var(--muted);line-height:1.6}
     .quote{border-left:3px solid var(--mustard);padding:6px 0 6px 16px;font-size:15px;font-weight:700;letter-spacing:-.02em;line-height:1.6;color:var(--brown2)}
     .process{display:grid;gap:10px}
     .step{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px}
@@ -606,16 +612,30 @@
     <section id="recommend">
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">Who We Work With</div>
+          <div class="kicker">추천 대상</div>
           <h2>이런 브랜드에 추천합니다</h2>
         </div>
-        <div class="grid-2">
-          <div class="card"><p>신제품을 출시했지만 고객에게 어떻게 설명해야 할지 막막한 브랜드</p></div>
-          <div class="card"><p>상세페이지는 있지만 라이브에서 말의 흐름이 잘 잡히지 않는 브랜드</p></div>
-          <div class="card"><p>식품, 뷰티, 건강식품처럼 직접 경험이 중요한 상품을 판매하는 브랜드</p></div>
-          <div class="card"><p>단순 쇼호스트 섭외가 아니라 기획부터 진행까지 함께 맡길 파트너가 필요한 브랜드</p></div>
-          <div class="card"><p>공공기관, 지자체, 농협, 재단처럼 여러 상품을 안정적으로 운영해야 하는 프로젝트</p></div>
-          <div class="card"><p>방송 이후 VOD, 숏폼, 상세페이지 자료로 콘텐츠를 활용하고 싶은 브랜드</p></div>
+        <div class="recommend-list">
+          <div class="recommend-item">
+            <span class="rec-icon">✓</span>
+            <span class="recommend-item-text"><strong>신제품 설명이 막막한 브랜드</strong><br/><span class="rec-sub">출시는 했는데 고객에게 어떻게 설명해야 할지 모르겠다면</span></span>
+          </div>
+          <div class="recommend-item">
+            <span class="rec-icon">✓</span>
+            <span class="recommend-item-text"><strong>상세페이지는 있지만 라이브 흐름이 약한 브랜드</strong><br/><span class="rec-sub">글로는 잘 써놨는데 방송에서 말의 순서가 잡히지 않는다면</span></span>
+          </div>
+          <div class="recommend-item">
+            <span class="rec-icon">✓</span>
+            <span class="recommend-item-text"><strong>식품·뷰티·건강식품처럼 체감 설명이 중요한 상품</strong><br/><span class="rec-sub">직접 만져보지 않아도 맛과 사용감이 전달되어야 하는 카테고리</span></span>
+          </div>
+          <div class="recommend-item">
+            <span class="rec-icon">✓</span>
+            <span class="recommend-item-text"><strong>쇼호스트 섭외보다 기획 파트너가 필요한 브랜드</strong><br/><span class="rec-sub">대본, 화면 구성, 진행, 송출까지 한 팀에 맡기고 싶다면</span></span>
+          </div>
+          <div class="recommend-item">
+            <span class="rec-icon">✓</span>
+            <span class="recommend-item-text"><strong>기관·지자체·농협처럼 여러 상품을 운영해야 하는 프로젝트</strong><br/><span class="rec-sub">정기 방송, 박람회, 단체 협업이 필요한 경우</span></span>
+          </div>
         </div>
       </div>
     </section>
