@@ -132,12 +132,18 @@
     .portfolio-card h3{margin:0 0 8px;font-size:16px;letter-spacing:-.02em;line-height:1.4;font-weight:700}
     .portfolio-card p{margin:0;color:var(--brown2);font-size:14px;line-height:1.85}
     .video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .video-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 8px 24px rgba(55,33,20,.07)}
-    .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#E6C889,#FFF1CC);display:flex;align-items:center;justify-content:center;position:relative}
-    .play{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(55,33,20,.88);color:white;font-size:20px;padding-left:3px;box-shadow:0 8px 18px rgba(55,33,20,.22)}
-    .video-copy{padding:18px 20px}
-    .video-copy h3{margin:0 0 8px;font-size:16px;letter-spacing:-.02em;line-height:1.4;font-weight:700}
-    .video-copy p{margin:0;color:var(--brown2);font-size:14px;line-height:1.85}
+    .vod-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 8px 24px rgba(55,33,20,.07);display:flex;flex-direction:column}
+    .vod-thumb{height:110px;display:flex;align-items:flex-end;padding:16px;position:relative}
+    .vod-cat-label{font-size:13px;font-weight:700;color:#fff;background:rgba(0,0,0,.28);border-radius:999px;padding:5px 14px;letter-spacing:-.01em}
+    .vod-body{padding:18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .vod-platform{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:3px 10px;letter-spacing:.02em;width:fit-content}
+    .vod-platform.naver{background:#03C75A;color:#fff}
+    .vod-platform.coupang{background:#E62343;color:#fff}
+    .vod-title{margin:0;font-size:15px;font-weight:700;letter-spacing:-.02em;line-height:1.5;color:var(--brown)}
+    .vod-desc{margin:0;font-size:13px;color:var(--brown2);line-height:1.8;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .vod-btn{display:inline-block;margin-top:auto;padding:9px 18px;background:var(--brown);color:#fff;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:-.01em;transition:background .2s}
+    .vod-btn:hover{background:var(--mustard2)}
+    .vod-footer-note{text-align:center;margin-top:28px;font-size:13px;color:var(--muted);letter-spacing:-.01em}
     .quote{border-left:3px solid var(--mustard);padding:6px 0 6px 16px;font-size:15px;font-weight:700;letter-spacing:-.02em;line-height:1.6;color:var(--brown2)}
     .process{display:grid;gap:10px}
     .step{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px}
@@ -468,43 +474,62 @@
     <section id="videos">
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">Video Portfolio</div>
+          <div class="kicker">대표 라이브 사례</div>
           <h2>영상은 단순한 기록이 아니라<br/>브랜드를 다시 보게 만드는 자료가 됩니다</h2>
-          <p class="desc">라이브는 방송 당일에만 끝나는 콘텐츠가 아닙니다. 서사임당 LIVE는 방송 중 구매 흐름뿐 아니라 이후 VOD, 숏폼, 상세페이지, 제안 자료로 활용될 수 있는 장면까지 함께 고려합니다.</p>
+          <p class="desc">라이브는 방송 당일에만 끝나는 콘텐츠가 아닙니다.<br/>서사임당 LIVE는 방송 중 구매 흐름뿐 아니라 이후 VOD, 숏폼, 상세페이지, 제안 자료로 활용될 수 있는 장면까지 함께 고려합니다.<br/><br/>현재 공개 사례는 식품 라이브를 중심으로 소개합니다.<br/>고기, 농산물, 시즌 과일, 수산 원물처럼 상품 특성이 다른 식품을 각각 다른 방식으로 설계해왔습니다.</p>
         </div>
         <div class="video-grid">
-          <article class="video-card">
-            <a href="https://view.shoppinglive.naver.com/replays/1961111" target="_blank" style="display:block;position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#E6C889,#FFF1CC);display:flex;align-items:center;justify-content:center">
-              <div class="play">▶</div>
-              <div style="position:absolute;bottom:10px;right:12px;background:rgba(55,33,20,.7);color:#fff;font-size:11px;padding:3px 8px;border-radius:999px">네이버 쇼핑라이브</div>
-            </a>
-            <div class="video-copy">
-              <h3>건강기능식품 · 어려운 성분을 생활 언어로</h3>
-              <p>성분명보다 고객의 하루 루틴 안에서 왜 필요한지 이해되도록 풀어냅니다. 심의에 맞는 표현 안에서 구매 이유를 정리합니다.</p>
+
+          <article class="vod-card">
+            <div class="vod-thumb" style="background:linear-gradient(145deg,#4A3728,#8B6352)">
+              <span class="vod-cat-label">냉장 양념육 라이브</span>
+            </div>
+            <div class="vod-body">
+              <div class="vod-platform naver">네이버 쇼핑라이브</div>
+              <h3 class="vod-title">양의나라 | 한 번도 얼리지 않은 냉장 양념양고기 스테이크</h3>
+              <p class="vod-desc">냉장육의 신선함, 양념의 윤기, 굽는 장면의 식욕 포인트가 살아나도록 구성한 양념육 라이브입니다. 고객이 화면만 보고도 "오늘 저녁 메뉴"로 떠올릴 수 있게 조리 장면과 맛 표현의 순서를 설계했습니다.</p>
+              <a href="https://view.shoppinglive.naver.com/replays/1955812" target="_blank" class="vod-btn">VOD 보기 →</a>
             </div>
           </article>
-          <article class="video-card">
-            <div class="thumb"><div class="play">▶</div></div>
-            <div class="video-copy">
-              <h3>식품 · 먹고 싶은 순간을 만드는 라이브</h3>
-              <p>단면, 수분감, 자르는 소리, 한입 반응으로 고객의 입안에 맛이 먼저 그려지게 구성합니다.</p>
+
+          <article class="vod-card">
+            <div class="vod-thumb" style="background:linear-gradient(145deg,#3D6B3A,#7BAD5E)">
+              <span class="vod-cat-label">산지 농산물 라이브</span>
+            </div>
+            <div class="vod-body">
+              <div class="vod-platform naver">네이버 쇼핑라이브</div>
+              <h3 class="vod-title">구름달옥수수 | 강원도 해발 700고지 달콤 쫀득 옥수수</h3>
+              <p class="vod-desc">강원도 고랭지 산지 이미지와 옥수수 알갱이의 찰기, 수분감, 달큰한 맛이 전달되도록 구성한 농산물 라이브입니다. 고객 입안에 톡톡 터지는 알갱이와 쫀득한 식감이 그려지도록 표현했습니다.</p>
+              <a href="https://view.shoppinglive.naver.com/replays/1961111" target="_blank" class="vod-btn">VOD 보기 →</a>
             </div>
           </article>
-          <article class="video-card">
-            <div class="thumb"><div class="play">▶</div></div>
-            <div class="video-copy">
-              <h3>뷰티 · 보이지 않는 사용감을 보여주는 라이브</h3>
-              <p>제형, 발림, 광, 흡수 후 피부 표현을 화면에서 확인할 수 있게 구성합니다.</p>
+
+          <article class="vod-card">
+            <div class="vod-thumb" style="background:linear-gradient(145deg,#C46A3A,#E8A87C)">
+              <span class="vod-cat-label">시즌 과일 라이브</span>
+            </div>
+            <div class="vod-body">
+              <div class="vod-platform coupang">쿠팡라이브</div>
+              <h3 class="vod-title">신비복숭아 | 오감자극 라이브</h3>
+              <p class="vod-desc">짧은 시즌에만 만날 수 있는 과일의 희소성, 단단한 식감, 과즙감, 한입 만족감을 중심으로 구성한 시즌 과일 라이브입니다. 고객이 화면 너머에서 먼저 맛을 상상하도록 설계했습니다.</p>
+              <a href="https://link.coupang.com/a/e5tV9hMGBw" target="_blank" class="vod-btn">VOD 보기 →</a>
             </div>
           </article>
-          <article class="video-card">
-            <div class="thumb"><div class="play">▶</div></div>
-            <div class="video-copy">
-              <h3>생활용품 · 쓰는 장면이 바로 떠오르는 라이브</h3>
-              <p>언제, 어디서, 어떻게 쓰는 제품인지 사용 전후 흐름으로 보여줍니다.</p>
+
+          <article class="vod-card">
+            <div class="vod-thumb" style="background:linear-gradient(145deg,#1A4A6B,#2E7BAD)">
+              <span class="vod-cat-label">수산 원물 라이브</span>
+            </div>
+            <div class="vod-body">
+              <div class="vod-platform naver">네이버 쇼핑라이브</div>
+              <h3 class="vod-title">요리가 필요한 원물 | 제주갈치 &amp; 노르웨이고등어</h3>
+              <p class="vod-desc">손질과 조리가 필요한 수산 원물을 고객이 부담스럽게 느끼지 않도록, 보관법과 조리 장면, 식탁 활용도를 중심으로 풀어낸 라이브입니다. 원물의 품질뿐 아니라 집에서 어떻게 먹으면 좋은지까지 함께 이해되도록 구성했습니다.</p>
+              <a href="https://view.shoppinglive.naver.com/replays/1916408" target="_blank" class="vod-btn">VOD 보기 →</a>
             </div>
           </article>
+
         </div>
+        <p class="vod-footer-note">카테고리별 실제 진행 사례는 상담 시 상품군에 맞춰 추가로 안내드립니다.</p>
       </div>
     </section>
 
