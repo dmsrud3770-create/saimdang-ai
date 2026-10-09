@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="상품 분석부터 대본, 촬영, 진행, 송출까지 — 브랜드가 더 잘 보이고 더 오래 기억되는 라이브를 만드는 라이브커머스 제작팀, 60FOCUS LIVE" />
+<title>60FOCUS LIVE | 라이브커머스 제작팀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#0B1C3B;
+    --navy2:#132A54;
+    --ink:#0C1322;
+    --paper:#FFFFFF;
+    --mist:#F4F6FA;
+    --line:#E2E6EE;
+    --muted:#5B6478;
+    --accent:#A9802E;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans KR',sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased}
+  .latin{font-family:'Inter',sans-serif}
+  .mono{font-family:'DM Mono',monospace}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'Inter',sans-serif;font-weight:800;font-size:16px;letter-spacing:-.02em;color:var(--navy)}
+  .navlinks{display:flex;gap:28px;font-size:13px;font-weight:600;letter-spacing:.01em;color:var(--muted)}
+  .navlinks a{text-decoration:none}
+  .navlinks a:hover{color:var(--navy)}
+  @media(max-width:720px){.navlinks{display:none}}
+
+  /* hero */
+  .hero{padding:92px 0 72px;background:linear-gradient(180deg,var(--mist) 0%,#fff 100%)}
+  .kicker{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:500;text-transform:uppercase}
+  .hero h1{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(34px,6vw,58px);line-height:1.08;letter-spacing:-.03em;margin:18px 0 22px;color:var(--navy)}
+  .hero .lede{font-size:clamp(17px,2.4vw,21px);line-height:1.6;color:#262E42;max-width:560px;margin:0 0 34px;font-weight:500}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:16px 26px;border-radius:4px;border:1px solid transparent}
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:var(--navy2)}
+  .btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+
+  section{padding:88px 0;border-bottom:1px solid var(--line)}
+  .head{max-width:640px;margin-bottom:48px}
+  .head h2{font-size:clamp(26px,3.6vw,36px);line-height:1.32;letter-spacing:-.025em;margin:14px 0 0;color:var(--navy)}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc{background:#fff;padding:36px 30px}
+  .svc .num{font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.08em}
+  .svc h3{font-family:'Inter',sans-serif;font-size:19px;font-weight:700;letter-spacing:-.01em;margin:14px 0 10px;color:var(--navy)}
+  .svc p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+  @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
+
+  /* work */
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+  .work-card{border:1px solid var(--line);background:#fff;overflow:hidden;border-radius:2px}
+  .work-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+  .work-copy{padding:22px 24px 26px}
+  .work-copy .tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--accent)}
+  .work-copy h3{font-size:18px;letter-spacing:-.015em;margin:8px 0 8px;color:var(--navy)}
+  .work-copy p{margin:0;font-size:13.5px;line-height:1.7;color:var(--muted)}
+  @media(max-width:720px){.work-grid{grid-template-columns:1fr}}
+
+  /* system */
+  .sys{counter-reset:s;border-top:1px solid var(--line)}
+  .sys-step{counter-increment:s;display:grid;grid-template-columns:72px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .sys-step .n{font-family:'DM Mono',monospace;font-size:13px;color:var(--accent)}
+  .sys-step .n:before{content:"0" counter(s)}
+  .sys-step b{display:block;font-size:17px;color:var(--navy);margin-bottom:4px;letter-spacing:-.01em}
+  .sys-step p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65}
+  .sys-arrow{display:none}
+
+  /* team */
+  .team-copy{max-width:620px}
+  .team-copy h2{font-size:clamp(24px,3.4vw,32px);line-height:1.42;letter-spacing:-.02em;color:var(--navy);margin:14px 0 20px}
+  .team-copy p{font-size:15.5px;line-height:1.85;color:#353C50;margin:0 0 14px}
+  .team-card{margin-top:30px;display:inline-flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--mist);padding:16px 20px;border-radius:4px}
+  .team-card .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+  .team-card b{display:block;font-size:14px;color:var(--navy)}
+  .team-card span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+
+  /* contact */
+  .contact{background:var(--navy);color:#fff;border-bottom:none}
+  .contact .kicker{color:#C9B27E}
+  .contact h2{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(26px,4.2vw,42px);line-height:1.28;letter-spacing:-.02em;margin:16px 0 18px}
+  .contact p{font-size:15.5px;line-height:1.8;color:#C3C9DA;max-width:520px;margin:0 0 30px}
+  .contact .btn-primary{background:#fff;color:var(--navy)}
+  .contact .btn-primary:hover{background:#E8EBF2}
+
+  footer{padding:36px 0;background:var(--navy2);color:#9BA4BC;font-size:12.5px;line-height:1.8}
+  footer .logo{color:#fff}
+  footer .fline{margin-top:6px}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="logo">60FOCUS LIVE</span>
+      <div class="navlinks">
+        <a href="#work">WORK</a>
+        <a href="#system">SYSTEM</a>
+        <a href="#team">TEAM</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="kicker">LIVE COMMERCE PRODUCTION</div>
+      <h1 class="latin">BETTER BRANDS,<br>BRIGHTER LIVE.</h1>
+      <p class="lede">브랜드가 더 잘 보이고, 더 오래 기억되는 라이브를 만듭니다.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">프로젝트 문의하기</a>
+        <a class="btn btn-ghost" href="#work">프로젝트 보기</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">WHAT WE DO</div>
+        <h2>회사가 하는 일</h2>
+      </div>
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="num mono">01</div>
+          <h3 class="latin">Live Strategy</h3>
+          <p>상품 분석, 판매 포인트, 대본 기획 — 무엇을 왜 사야 하는지부터 설계합니다.</p>
+        </article>
+        <article class="svc">
+          <div class="num mono">02</div>
+          <h3 class="latin">Live Production</h3>
+          <p>VMD 세팅, 카메라, 진행, 송출 — 설계한 장면을 실제 방송으로 완성합니다.</p>
+        </article>
+        <article class="svc">
+          <div class="num mono">03</div>
+          <h3 class="latin">Content Extension</h3>
+          <p>VOD·숏폼·다음 방송 활용 — 한 번의 라이브를 다음 성과로 연결합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">SELECTED WORK</div>
+        <h2>실제 프로젝트</h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_grdc.jpg.png" alt="구름달옥수수 라이브 장면" />
+          <div class="work-copy">
+            <div class="tag mono">FOOD</div>
+            <h3>구름달옥수수 · 산지 농산물</h3>
+            <p>산지의 계절감이 사라지지 않도록, 옥수수 알갱이의 찰기와 수분감이 화면에서 먼저 느껴지도록 장면을 설계했습니다.</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_nutrione.jpg.png" alt="뉴트리원 건강식품 라이브 장면" />
+          <div class="work-copy">
+            <div class="tag mono">HEALTH</div>
+            <h3>뉴트리원 · 건강식품</h3>
+            <p>성분표가 아니라 생활 루틴으로 읽히도록, 섭취 장면과 효과를 쉬운 언어로 풀어 구성했습니다.</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_dermagen.jpg.png" alt="더마젠 뷰티 라이브 장면" />
+          <div class="work-copy">
+            <div class="tag mono">BEAUTY</div>
+            <h3>더마젠 · 뷰티</h3>
+            <p>제형과 광, 손끝의 사용감이 보이도록 카메라 동선과 클로즈업 타이밍을 중심으로 설계했습니다.</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://dmsrud3770-create.github.io/saimdang-ai/live.playclean.jpg.png" alt="플레이클린 생활용품 라이브 장면" />
+          <div class="work-copy">
+            <div class="tag mono">LIFESTYLE</div>
+            <h3>플레이클린 · 생활용품</h3>
+            <p>사용 전후 차이가 한눈에 비교되도록, 실제 사용 장면 중심으로 화면과 멘트를 구성했습니다.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="system">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">HOW WE WORK</div>
+        <h2>60FOCUS SYSTEM</h2>
+      </div>
+      <div class="sys">
+        <div class="sys-step">
+          <div class="n mono"></div>
+          <div><b>상품·목표 확인</b><p>상품 특성, 판매 플랫폼, 이번 라이브의 목표를 먼저 정리합니다.</p></div>
+        </div>
+        <div class="sys-step">
+          <div class="n mono"></div>
+          <div><b>판매 장면 기획</b><p>무엇을 먼저 보여주고 어떤 순서로 이해시킬지, 대본과 화면으로 설계합니다.</p></div>
+        </div>
+        <div class="sys-step">
+          <div class="n mono"></div>
+          <div><b>제작·송출</b><p>VMD, 카메라, 진행, 송출까지 팀이 함께 움직여 라이브를 완성합니다.</p></div>
+        </div>
+        <div class="sys-step">
+          <div class="n mono"></div>
+          <div><b>다음 콘텐츠 연결</b><p>방송 반응을 VOD·숏폼·다음 회차 기획으로 이어갑니다.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="kicker">TEAM</div>
+      <div class="team-copy">
+        <h2>한 사람이 진행하는 방송이 아니라,<br>팀이 완성하는 라이브</h2>
+        <p>상품을 분석하는 사람, 장면을 설계하는 사람, 화면을 만드는 사람, 그리고 그 순간을 전달하는 사람. 60FOCUS LIVE는 이 과정을 한 사람의 감에 맡기지 않고, 역할이 나뉜 팀으로 움직입니다.</p>
+        <p>그래서 방송이 끝나도 다음 방송의 완성도가 떨어지지 않습니다.</p>
+        <div class="team-card">
+          <span class="dot"></span>
+          <div>
+            <b>서은경 · Brand Live Director</b>
+            <span>누적 2,500회+ 진행 경험</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="kicker mono">START A PROJECT</div>
+      <h2 class="latin">우리 브랜드의 다음 라이브,<br>어디서부터 시작할까요?</h2>
+      <p>상품명과 희망 플랫폼만 보내주시면, 상품에 맞는 진행 방식과 예상 구성부터 안내드립니다.</p>
+      <a class="btn btn-primary" href="https://pf.kakao.com/_RIinX" target="_blank" rel="noopener">카카오톡으로 문의하기</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="logo latin">60FOCUS LIVE</div>
+      <div class="fline">Live Commerce Production Team</div>
+      <div class="fline">기획 · 촬영 · 진행 · 송출 · 콘텐츠 확장</div>
+    </div>
+  </footer>
+
+</body>
+</html>
