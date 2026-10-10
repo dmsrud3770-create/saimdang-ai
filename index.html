@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>서사임당 LIVE | 오감형 연출로 구매전환을 설계합니다</title>
+  <title>서사임당 LIVE · 60FOCUS LIVE | 식품·건강식품 라이브 기획·진행·제작</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet" />
-  <meta name="description" content="서사임당 LIVE는 식품·건강기능식품·신선식품 브랜드를 위한 오감형 라이브 연출, 기획, 대본, 송출, 진행을 제공합니다." />
+  <meta name="description" content="서사임당 LIVE · 60FOCUS LIVE. 식품·건강식품에 강한 라이브커머스. 방송 기획·대본·진행·제작·송출까지 함께합니다. 카카오톡 채널에서 우리 상품에 맞는 방송을 상담하세요." />
   <style>
     :root {
       --ivory:#F4F6FA;
@@ -224,105 +224,931 @@
       .proof span{font-size:10px}
       .trust-grid{grid-template-columns:1fr}
     }
+
+    /* Inquiry-first first screen. Existing lower-page styles are unchanged. */
+    .topbar .nav{height:72px;gap:22px}
+    .topbar .brand{display:flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.2;flex-shrink:0}
+    .brand-name{font-size:18px;font-weight:800;letter-spacing:-.04em}
+    .brand-studio{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+    .topbar .navlinks{margin-left:auto;gap:2px}
+    .nav-inquiry{flex-shrink:0;min-height:42px;padding:10px 16px;font-size:13px;box-shadow:none}
+    .hero{padding:46px 0 50px;background:linear-gradient(135deg,#F7F9FC 0%,#F4F6FA 65%,#F0F2F7 100%)}
+    .hero-grid{grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+    .hero-copy{min-width:0}
+    .hero .eyebrow{padding:0;border:0;border-radius:0;background:none;color:var(--mustard2);font-size:11px;letter-spacing:.13em;font-family:'Inter',sans-serif;font-weight:700}
+    .hero h1{font-size:clamp(30px,3.1vw,39px);font-weight:800;line-height:1.36;letter-spacing:-.055em;margin:16px 0}
+    .hero h1 span{display:block}
+    .hero .lead{font-size:15px;line-height:1.85;margin:0 0 18px;max-width:500px}
+    .hero .service-points{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0 0 23px}
+    .hero .service-points li{margin:0;padding:4px 10px;font-size:12px;font-weight:600;color:var(--brown2);border:1px solid var(--line);background:rgba(255,255,255,.8);border-radius:3px}
+    .hero .hero-actions{display:block;margin:0}
+    .hero .inquiry-primary{min-height:54px;min-width:306px;padding:14px 21px;font-size:16px;font-weight:700;justify-content:space-between;gap:25px;border-radius:4px}
+    .hero .inquiry-primary .cta-arrow{font-size:21px;font-weight:400;line-height:1}
+    .hero .inquiry-note{font-size:12px;line-height:1.75;color:var(--muted);margin:9px 0 10px}
+    .hero .portfolio-link{display:inline-flex;align-items:center;gap:9px;padding:7px 0;font-size:13px;font-weight:600;color:var(--brown2);text-underline-offset:5px;text-decoration:underline;text-decoration-color:#BDC5D4}
+    .hero .portfolio-link:hover{color:var(--brown);text-decoration-color:var(--brown)}
+    .hero .proof{display:grid;grid-template-columns:.83fr 1.17fr;gap:0;margin-top:23px;padding-top:20px;border-top:1px solid #D8DFEA}
+    .hero .proof .item{background:none;border:0;border-radius:0;box-shadow:none;padding:0 15px 0 0}
+    .hero .proof .item+.item{padding:0 0 0 20px;border-left:1px solid #D8DFEA}
+    .hero .proof b{font-size:19px;line-height:1.4;font-weight:800}
+    .hero .proof span{font-size:11px;line-height:1.55;margin-top:3px}
+    .hero .director-card{gap:10px;margin:20px 0 0;padding:0;background:none;border:0;border-radius:0;box-shadow:none}
+    .hero .director-photo-wrap{width:39px;height:39px;border-width:1px}
+    .hero .director-name{font-size:12px;font-weight:700;margin:0 0 2px;letter-spacing:-.01em}
+    .hero .director-role{font-size:10px;color:var(--muted);font-weight:500;letter-spacing:0;margin:0;text-transform:none}
+    .hero-visual{margin:0;min-height:0;border-radius:6px;overflow:hidden;box-shadow:0 18px 44px rgba(11,28,59,.11)}
+    .hero-visual::after{display:none}
+    .hero-image-wrap{position:relative;overflow:hidden;background:#E9E8DF;aspect-ratio:4/5}
+    .hero-visual .hero-image-wrap img{width:100%;height:100%;min-height:0;object-fit:contain;object-position:center}
+    .hero-image-label{position:absolute;top:16px;left:16px;display:inline-flex;align-items:center;gap:7px;padding:7px 10px;background:rgba(255,255,255,.93);color:var(--brown);font-size:10px;font-weight:700;letter-spacing:.04em;border:1px solid rgba(255,255,255,.8);border-radius:3px}
+    .hero-image-label::before{content:'';display:block;width:6px;height:6px;background:var(--mustard);border-radius:50%}
+    .hero-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;padding:16px 18px}
+    .hero-caption b{display:block;font-size:13px;font-weight:700;letter-spacing:-.02em}
+    .hero-caption .caption-detail{display:block;font-size:11px;color:var(--muted);margin-top:3px;line-height:1.5}
+    .hero-controls{display:flex;align-items:center;gap:5px;flex-shrink:0}
+    .hero-controls[hidden]{display:none}
+    .hero-controls button{display:inline-flex;align-items:center;justify-content:center;width:32px;height:36px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--brown);font-size:18px;cursor:pointer}
+    .hero-controls button:hover{background:var(--soft)}
+    .hero-counter{font-family:'DM Mono',monospace;min-width:39px;text-align:center;font-size:10px;color:var(--muted)}
+    .topbar a:focus-visible,.hero a:focus-visible,.hero button:focus-visible{outline:3px solid var(--mustard);outline-offset:4px}
+    @media(min-width:901px) and (max-width:1100px){
+      .hero-grid{gap:28px;grid-template-columns:1.12fr .88fr}
+      .hero h1{font-size:33px}
+      .topbar .nav{gap:16px}
+      .topbar .navlinks a{padding:8px}
+    }
+    @media(max-width:900px){
+      .topbar .nav{height:66px;gap:12px}
+      .topbar .navlinks{display:none}
+      .hero{padding:31px 0 34px}
+      .hero-grid{grid-template-columns:1fr;gap:30px}
+      .hero-copy{max-width:600px}
+      .hero h1{font-size:36px}
+      .hero-visual{width:100%;max-width:600px}
+      .hero-visual,.hero-visual img{min-height:0}
+      .hero-image-wrap{aspect-ratio:1/1}
+    }
+    @media(max-width:520px){
+      .topbar .nav{height:64px}
+      .topbar .brand-name{font-size:16px}
+      .topbar .brand-studio{font-size:9px;letter-spacing:.11em}
+      .nav-inquiry{font-size:12px;min-height:40px;padding:9px 12px}
+      .hero .wrap{width:calc(100% - 36px)}
+      .hero{padding:26px 0 30px}
+      .hero h1{font-size:clamp(25px,7.7vw,34px);line-height:1.4;margin:12px 0}
+      .hero .eyebrow{font-size:10px;letter-spacing:.1em}
+      .hero .lead{font-size:14px;line-height:1.8;margin-bottom:15px}
+      .hero .service-points{gap:6px;margin-bottom:20px}
+      .hero .service-points li{font-size:11px;padding:4px 9px}
+      .hero .inquiry-primary{width:100%;min-width:0;font-size:15px;min-height:53px;padding:13px 18px}
+      .hero .inquiry-note{font-size:11px;margin-top:8px;line-height:1.7}
+      .hero .proof{margin-top:17px;padding-top:17px;grid-template-columns:.85fr 1.15fr}
+      .hero .proof b{font-size:17px}
+      .hero .proof span{font-size:10px}
+      .hero .proof .item+.item{padding-left:15px}
+      .hero .director-card{margin-top:17px}
+      .hero-grid{gap:26px}
+      .hero-image-wrap{aspect-ratio:4/5}
+      .hero-caption{padding:13px 12px;gap:7px}
+      .hero-caption b{font-size:12px}
+      .hero-caption .caption-detail{font-size:10px}
+      .hero-controls{gap:3px}
+      .hero-controls button{width:28px;height:36px}
+      .hero-counter{min-width:35px;font-size:9px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .topbar .btn,.hero .btn{transition:none}
+      .topbar .btn:hover,.hero .btn:hover{transform:none}
+    }
+
+    /* All 20 supplied broadcast cases; empty shot slots are review-only. */
+    #broadcast-cases{background:#fff;scroll-margin-top:74px;padding:56px 0 62px}
+    .cases-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:20px}
+    .cases-heading h2{margin-bottom:10px}
+    .cases-heading .desc{max-width:750px;font-size:14px}
+    .case-total{flex-shrink:0;font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);padding-bottom:4px}
+    .case-filters{display:flex;flex-wrap:wrap;gap:7px;margin:23px 0 14px}
+    .case-filters[hidden]{display:none}
+    .case-filter{font:inherit;font-size:12px;font-weight:600;line-height:1.3;min-height:42px;padding:10px 13px;color:var(--brown2);background:#fff;border:1px solid var(--line);border-radius:4px;cursor:pointer}
+    .case-filter:hover{background:var(--soft);border-color:#AEBACD}
+    .case-filter[aria-pressed="true"]{background:var(--brown);border-color:var(--brown);color:#fff}
+    .case-filter-count{opacity:.72;font-size:10px;margin-left:5px;font-family:'DM Mono',monospace}
+    .case-filter:focus-visible,.case-shot-link:focus-visible,.case-planned summary:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+    .case-review-note{font-size:12px;line-height:1.75;color:var(--brown2);background:#F8F6F0;border-left:3px solid #B89A60;padding:11px 14px;margin:0 0 28px}
+    .case-review-note strong{font-weight:700;color:var(--brown)}
+    .case-group{margin-top:32px}
+    .case-group[hidden],.case-card[hidden]{display:none!important}
+    .case-group-heading{display:flex;align-items:baseline;gap:10px;margin:0 0 16px;font-size:19px;letter-spacing:-.03em;font-weight:800}
+    .case-group-heading span{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0}
+    .case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+    .case-card{min-width:0;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 5px 18px rgba(11,28,59,.035)}
+    .case-current{margin:0}
+    .case-shot-link{display:block;position:relative;background:#F1F3F6;aspect-ratio:4/5;overflow:hidden}
+    .case-shot-link img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+    .case-photo-badge{position:absolute;top:10px;left:10px;padding:5px 8px;font-size:10px;font-weight:600;line-height:1.3;color:var(--brown);background:rgba(255,255,255,.94);border:1px solid rgba(226,230,238,.9);border-radius:3px}
+    .case-zoom{position:absolute;right:10px;bottom:10px;padding:5px 8px;font-size:10px;line-height:1.3;color:var(--brown);background:rgba(255,255,255,.94);border:1px solid rgba(226,230,238,.9);border-radius:3px}
+    .case-copy{padding:17px 16px 16px}
+    .case-id{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.06em}
+    .case-copy h4{margin:7px 0 8px;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:-.025em}
+    .case-copy p{margin:0;font-size:12px;line-height:1.75;color:var(--brown2)}
+    .case-planned{border-top:1px solid var(--line);background:#FAFBFD}
+    .case-planned summary{cursor:pointer;padding:13px 16px;min-height:46px;font-size:12px;font-weight:600;color:var(--brown2);line-height:1.6}
+    .case-planned[open] summary{border-bottom:1px solid var(--line)}
+    .case-slot-grid{display:grid;grid-template-columns:1fr;gap:10px;padding:14px}
+    .case-slot{min-height:128px;border:1px dashed #B5C0D0;background:#F3F5F8;border-radius:4px;padding:15px 13px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px}
+    .case-slot-number{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--muted)}
+    .case-slot strong{font-size:12px;line-height:1.7;font-weight:600;color:var(--brown2)}
+    .case-slot-status{font-size:10px;color:var(--muted);line-height:1.5}
+    .case-category-note{font-size:11px;line-height:1.8;color:var(--muted);margin-top:27px}
+    .hero-caption b{max-width:290px}
+    @media(max-width:900px){
+      .case-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+      .cases-heading{align-items:flex-start}
+      .hero-caption b{max-width:350px}
+    }
+    @media(max-width:600px){
+      #broadcast-cases{padding:39px 0 42px;scroll-margin-top:64px}
+      .cases-heading{display:block;margin-bottom:18px}
+      .case-total{display:block;margin-top:10px;font-size:11px}
+      .case-filters{gap:6px;margin-top:18px}
+      .case-filter{font-size:11px;min-height:40px;padding:9px 10px}
+      .case-filter-count{font-size:9px;margin-left:4px}
+      .case-review-note{font-size:11px;margin-bottom:23px;padding:10px 12px}
+      .case-grid{grid-template-columns:1fr;gap:19px}
+      .case-group{margin-top:26px}
+      .case-group-heading{font-size:18px;margin-bottom:13px}
+      .case-copy{padding:15px}
+      .case-copy h4{font-size:15px}
+      .case-copy p{font-size:12px}
+      .case-slot-grid{grid-template-columns:1fr 1fr;gap:9px;padding:12px}
+      .case-slot{min-height:153px;padding:12px 10px;gap:8px}
+      .case-slot strong{font-size:11px;line-height:1.7}
+      .case-slot-status{font-size:9px}
+      .hero-caption b{max-width:220px;font-size:11px;line-height:1.5}
+    }
+    @media(max-width:350px){
+      .case-slot-grid{grid-template-columns:1fr}
+      .case-slot{min-height:116px}
+    }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#">
-        <span>서사임당 LIVE</span>
+      <a class="brand" href="#" aria-label="서사임당 LIVE · 60FOCUS LIVE 홈">
+        <span class="brand-name">서사임당 LIVE</span>
+        <span class="brand-studio">60FOCUS LIVE</span>
       </a>
-      <nav class="navlinks">
+      <nav class="navlinks" aria-label="주요 메뉴">
         <a href="#shift">관점 전환</a>
-        <a href="#portfolio">연출 사례</a>
+        <a href="#broadcast-cases">연출 사례</a>
         <a href="#videos">영상</a>
         <a href="#plans">서비스</a>
-        <a href="#contact">문의</a>
       </nav>
+      <a class="btn nav-inquiry" href="https://pf.kakao.com/_RIinX" target="_blank" rel="noopener noreferrer" aria-label="방송 상담, 카카오톡 채널 새 창">방송 상담 <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
-        <div>
-          <span class="eyebrow">Brand Live Director · 오감형 라이브 설계</span>
-          <h1>오감으로 구매 장면을 설계하는<br/>브랜드 라이브 디렉터</h1>
+        <div class="hero-copy">
+          <span class="eyebrow">2,500회+ 라이브 실전 경험</span>
+          <h1 id="hero-title"><span>식품·건강식품 라이브,</span><span>기획부터 진행·제작까지</span></h1>
           <p class="lead">
-            고객은 화면 너머의 상품을 직접 만질 수 없습니다.<br/>
-            그래서 서사임당 LIVE는 <strong>맛, 향, 질감, 사용 장면</strong>이<br/>머릿속에 그려지는 순서로 라이브를 설계합니다.<br/><br/>
-            기획, 대본, 화면 구성, 진행, 송출까지<br/>브랜드가 팔리는 장면을 함께 만듭니다.
+            상품의 특징을 쉽게 설명하고, 조리·시연으로 보여드립니다.<br/>
+            스튜디오 준비부터 기획·진행·송출까지 함께합니다.
           </p>
-
-          <!-- 프로필 카드 -->
-          <div class="director-card">
-            <div class="director-photo-wrap">
-              <img src="profile_1.jpg.png" alt="서은경 Brand Live Director" class="director-photo" />
-            </div>
-            <div class="director-info">
-              <div class="director-role">Brand Live Director</div>
-              <div class="director-name">서 은 경</div>
-              <div class="director-tags">
-                <span>공공기관 협업</span>
-                <span>2,500회+</span>
-                <span>One-stop</span>
-              </div>
-            </div>
-          </div>
+          <ul class="service-points" aria-label="방송 제작 과정">
+            <li>방송 기획·대본</li>
+            <li>진행·연출</li>
+            <li>촬영·송출</li>
+          </ul>
 
           <div class="hero-actions">
-            <a class="btn gold" href="#portfolio">연출 사례 보기</a>
-            <a class="btn ghost" href="#contact">상담 문의</a>
+            <a class="btn inquiry-primary" href="https://pf.kakao.com/_RIinX" target="_blank" rel="noopener noreferrer" aria-describedby="inquiry-note">
+              우리 상품 방송 상담하기 <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <p class="inquiry-note" id="inquiry-note">카카오톡 채널로 연결됩니다.<br/>상품명·희망 플랫폼을 남겨주세요.</p>
+            <a class="portfolio-link" href="#broadcast-cases">실제 방송 사례 보기 <span aria-hidden="true">↓</span></a>
           </div>
-          <div class="proof">
-            <div class="item"><b>2,500+</b><span>라이브 실전 경험</span></div>
+
+          <div class="proof" aria-label="방송 경험">
+            <div class="item"><b>원스톱 제작</b><span>스튜디오·기획·진행·송출</span></div>
             <div class="item"><b>기관 프로젝트</b><span>공공기관·지자체·농협</span></div>
-            <div class="item"><b>식품·건기식</b><span>오감형 라이브 설계</span></div>
-            <div class="item"><b>One-stop</b><span>기획·대본·진행·송출</span></div>
-            <div class="item"><b>Since 2021</b><span>라이브커머스 전문</span></div>
+          </div>
+          <div class="director-card">
+            <div class="director-photo-wrap">
+              <img src="assets/profile.webp" alt="서은경 프로필" class="director-photo" width="39" height="39" />
+            </div>
+            <div>
+              <div class="director-name">서은경 · 브랜드 라이브 디렉터</div>
+              <div class="director-role">호텔조리 전공 · 조리·시연을 살린 상품 설명</div>
+            </div>
           </div>
         </div>
-        <div class="hero-visual" id="heroSlider">
-          <img src='live_nutrione.jpg.png' alt='서사임당 라이브 연출 사례' id="heroImg" />
-          <div class="hero-note">
-            <b>브랜드마다 다른 오감형 연출</b>
-            <span>식품 · 건기식 · 뷰티 · 생활용품까지</span>
+
+        <figure class="hero-visual" id="heroSlider" aria-label="실제 방송 현장 사진">
+          <div class="hero-image-wrap">
+            <img src="assets/cases/case-19.webp" alt="앞치마와 마이크를 착용한 진행자와 달걀·달걀프라이·완성 요리가 있는 방송 세팅" id="heroImg" width="1080" height="1920" fetchpriority="high" />
+            <span class="hero-image-label">실제 방송 현장</span>
           </div>
-          <div style="position:absolute;bottom:80px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10" id="heroDots"></div>
-        </div>
+          <figcaption class="hero-caption">
+            <div>
+              <b>달걀과 완성 요리를 함께 보여주는 방송</b>
+              <span class="caption-detail">실제 식품 방송 세팅 · 사례 19</span>
+            </div>
+            <div class="hero-controls" id="heroControls" hidden>
+              <button type="button" id="heroPrev" aria-label="이전 방송 현장 사진">‹</button>
+              <span class="hero-counter" id="heroCounter" aria-live="polite">01 / 06</span>
+              <button type="button" id="heroNext" aria-label="다음 방송 현장 사진">›</button>
+            </div>
+          </figcaption>
+        </figure>
         <script>
-          const slides = [
-            'live_nutrione.jpg.png',
-            'live_bluemartin.jpg.png',
-            'live_dermagen.jpg.png',
-            'live_cono.jpg.jpg',
-            'live_grdc.jpg.png',
-            'live.lalamarket.jpg.png',
-            'live.orgarbonbaby.jpg.png',
-            'live.playclean.jpg.png',
-            'live.recipebox.jpg.png',
-            'live.recipebox-kidsday.jpg.png'
-          ];
-          let cur = 0;
-          const img = document.getElementById('heroImg');
-          const dotsWrap = document.getElementById('heroDots');
-          slides.forEach((_, i) => {
-            const d = document.createElement('div');
-            d.style.cssText = 'width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:.3s';
-            d.onclick = () => go(i);
-            dotsWrap.appendChild(d);
-          });
-          function go(n) {
-            cur = (n + slides.length) % slides.length;
-            img.style.opacity = '0';
-            setTimeout(() => { img.src = slides[cur]; img.style.opacity = '1'; }, 300);
-            [...dotsWrap.children].forEach((d, i) => d.style.background = i === cur ? 'rgba(255,255,255,.95)' : 'rgba(255,255,255,.5)');
-          }
-          img.style.transition = 'opacity .3s';
-          go(0);
-          setInterval(() => go(cur + 1), 3500);
+          (() => {
+            const slides = [["assets/cases/case-19.webp", "앞치마와 마이크를 착용한 진행자, 달걀·달걀프라이·달걀 요리", "달걀과 조리 예시를 함께 보여주는 식품 방송", "실제 방송 현장 · 사례 19", 1080, 1920], ["assets/cases/case-18.webp", "손으로 고구마 단면을 카메라 가까이에 보여주는 장면", "단면과 질감까지 가까이 보여주는 제품 시연", "실제 방송 현장 · 사례 18", 800, 1422], ["assets/cases/case-12.webp", "육류 포장, 프라이팬, 휴대용 버너와 진행자", "제품과 조리 도구를 함께 구성한 육류 방송", "실제 방송 현장 · 사례 12", 800, 1422], ["assets/cases/case-06.webp", "파란 비타민 C 패키지, 스틱 제품, 진행자", "제품 패키지와 구성을 보여주는 비타민 C 방송", "실제 방송 현장 · 사례 06", 800, 1422], ["assets/cases/case-20.webp", "바구니와 그릇에 진열된 감귤과 진행자", "제품의 색과 구성을 살린 감귤 방송", "실제 방송 현장 · 사례 20", 800, 1422], ["assets/cases/case-11.webp", "크림 튜브, 패치 패키지, 진행자", "크림과 패치 제품을 함께 구성한 방송", "실제 방송 현장 · 사례 11", 800, 1422]];
+            let current = 0;
+            const image = document.getElementById('heroImg');
+            const counter = document.getElementById('heroCounter');
+            const caption = document.querySelector('.hero-caption b');
+            const detail = document.querySelector('.hero-caption .caption-detail');
+            const show = (offset) => {
+              current = (current + offset + slides.length) % slides.length;
+              image.src = slides[current][0];
+              image.alt = slides[current][1];
+              image.width = slides[current][4];
+              image.height = slides[current][5];
+              caption.textContent = slides[current][2];
+              detail.textContent = slides[current][3];
+              counter.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+            };
+            document.getElementById('heroPrev').addEventListener('click', () => show(-1));
+            document.getElementById('heroNext').addEventListener('click', () => show(1));
+            document.getElementById('heroControls').hidden = false;
+          })();
         </script>
       </div>
+    </section>
+
+    <section id="broadcast-cases" aria-labelledby="cases-title">
+      <div class="wrap">
+        <div class="cases-heading">
+          <div>
+            <div class="kicker">방송 현장</div>
+            <h2 id="cases-title">실제 방송 사례</h2>
+            <p class="desc">고기는 굽고, 식품은 자르고 조리합니다.<br/>화장품은 제형을 보여주고, 생활용품은 직접 사용합니다.</p>
+          </div>
+          <span class="case-total" id="caseResultCount" role="status" aria-live="polite">전체 20개 사례</span>
+        </div>
+        <div class="case-filters" id="caseFilters" role="group" aria-label="방송 사례 카테고리" hidden>
+            <button class="case-filter" type="button" data-category="all" aria-pressed="true" aria-controls="case-groups">전체 <span class="case-filter-count">20</span></button>
+            <button class="case-filter" type="button" data-category="fruit" aria-pressed="false" aria-controls="case-groups">과일 <span class="case-filter-count">3</span></button>
+            <button class="case-filter" type="button" data-category="food" aria-pressed="false" aria-controls="case-groups">식품 <span class="case-filter-count">11</span></button>
+            <button class="case-filter" type="button" data-category="wellness" aria-pressed="false" aria-controls="case-groups">건강식품 <span class="case-filter-count">3</span></button>
+            <button class="case-filter" type="button" data-category="beauty" aria-pressed="false" aria-controls="case-groups">화장품 <span class="case-filter-count">1</span></button>
+            <button class="case-filter" type="button" data-category="daily" aria-pressed="false" aria-controls="case-groups">생활용품·바디케어 <span class="case-filter-count">1</span></button>
+            <button class="case-filter" type="button" data-category="kitchen" aria-pressed="false" aria-controls="case-groups">주방용품 <span class="case-filter-count">1</span></button>
+        </div>
+        <p class="case-review-note"><strong>검토용 구성</strong> · 각 사례에 현재 사진 1장과 추가 사진 2장 자리를 마련했습니다.<br/>‘추가 사진 2장 자리 보기’를 열면 필요한 촬영 장면을 확인할 수 있습니다.</p>
+        <div id="case-groups">
+          <div class="case-group" data-category-group="fruit" data-case-count="3">
+            <h3 class="case-group-heading">과일 <span>3개 사례</span></h3>
+            <div class="case-grid">
+            <article class="case-card" id="case-20" data-case-index="20" aria-labelledby="case-title-20">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-20.webp" target="_blank" rel="noopener" aria-label="감귤 · 제품 진열 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-20.webp" width="800" height="1422" alt="바구니와 그릇에 진열된 감귤과 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 20</span>
+                  <h4 id="case-title-20">감귤 · 제품 진열</h4>
+                  <p>제품의 색과 구성을 살린 감귤 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 20 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>감귤 단면·크기 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 20 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>껍질을 벗겨 속을 보여주는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-10" data-case-index="10" aria-labelledby="case-title-10">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-10.webp" target="_blank" rel="noopener" aria-label="복숭아·감귤 · 신선식품 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-10.webp" width="800" height="1422" alt="복숭아, 감귤, 단호박과 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 10</span>
+                  <h4 id="case-title-10">복숭아·감귤 · 신선식품 구성</h4>
+                  <p>복숭아와 감귤 등을 진열한 신선식품 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 10 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>복숭아 과육·감귤 단면 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 10 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>과일을 자르거나 맛을 설명하는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-17" data-case-index="17" aria-labelledby="case-title-17">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-17.webp" target="_blank" rel="noopener" aria-label="사과·포도·감귤 · 과일 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-17.webp" width="800" height="1422" alt="사과, 초록색 포도, 감귤과 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 17</span>
+                  <h4 id="case-title-17">사과·포도·감귤 · 과일 구성</h4>
+                  <p>여러 과일과 먹는 구성을 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 17 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>과일 단면·크기 비교 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 17 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>과일을 자르거나 그릇에 담는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            </div>
+          </div>
+          <div class="case-group" data-category-group="food" data-case-count="11">
+            <h3 class="case-group-heading">식품 <span>11개 사례</span></h3>
+            <div class="case-grid">
+            <article class="case-card" id="case-19" data-case-index="19" aria-labelledby="case-title-19">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-19.webp" target="_blank" rel="noopener" aria-label="달걀 · 완성 요리 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-19.webp" width="1080" height="1920" alt="앞치마와 마이크를 착용한 진행자, 달걀·달걀프라이·달걀 요리" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 19</span>
+                  <h4 id="case-title-19">달걀 · 완성 요리 구성</h4>
+                  <p>달걀과 조리 예시를 함께 보여주는 식품 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 19 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>완성 요리의 단면·재료 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 19 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>진행자가 실제로 조리하는 과정</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-18" data-case-index="18" aria-labelledby="case-title-18">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-18.webp" target="_blank" rel="noopener" aria-label="고구마 · 단면 시연 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-18.webp" width="800" height="1422" alt="손으로 고구마 단면을 카메라 가까이에 보여주는 장면" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 18</span>
+                  <h4 id="case-title-18">고구마 · 단면 시연</h4>
+                  <p>단면과 질감까지 가까이 보여주는 제품 시연</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 18 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>진행자와 제품이 함께 보이는 전체 세팅</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 18 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>진행자가 제품 특징을 설명하는 장면</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-12" data-case-index="12" aria-labelledby="case-title-12">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-12.webp" target="_blank" rel="noopener" aria-label="육류 · 조리 도구 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-12.webp" width="800" height="1422" alt="육류 포장, 프라이팬, 휴대용 버너와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 12</span>
+                  <h4 id="case-title-12">육류 · 조리 도구 구성</h4>
+                  <p>제품과 조리 도구를 함께 구성한 육류 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 12 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>고기 표면·단면 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 12 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>실제로 굽거나 자르는 조리 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-01" data-case-index="1" aria-labelledby="case-title-01">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-01.webp" target="_blank" rel="noopener" aria-label="꿀 · 단품과 선물 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-01.webp" width="800" height="1422" alt="마누카 꿀 포장, 스틱, 선물 상자와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 01</span>
+                  <h4 id="case-title-01">꿀 · 단품과 선물 구성</h4>
+                  <p>꿀 스틱과 선물 상자를 함께 보여주는 방송 세팅</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 01 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>스틱·내용물 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 01 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>스틱 개봉이나 덜어 보여주는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-03" data-case-index="3" aria-labelledby="case-title-03">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-03.webp" target="_blank" rel="noopener" aria-label="옥수수 · 원물과 조리 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-03.webp" width="720" height="1280" alt="껍질 있는 옥수수, 조리된 옥수수, 냄비와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 03</span>
+                  <h4 id="case-title-03">옥수수 · 원물과 조리 구성</h4>
+                  <p>옥수수 원물과 조리 도구를 함께 구성한 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 03 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>알갱이·단면 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 03 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>찜이나 실제 먹는 방법을 보여주는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-04" data-case-index="4" aria-labelledby="case-title-04">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-04.webp" target="_blank" rel="noopener" aria-label="달걀 · 제품과 활용 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-04.webp" width="800" height="1422" alt="달걀 포장·원물, 달걀 요리와 앞치마를 착용한 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 04</span>
+                  <h4 id="case-title-04">달걀 · 제품과 활용 구성</h4>
+                  <p>달걀과 여러 활용 예시를 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 04 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>달걀을 깨서 내용물을 보여주는 컷</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 04 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>실제 달걀 조리 과정</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-05" data-case-index="5" aria-labelledby="case-title-05">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-05.webp" target="_blank" rel="noopener" aria-label="명란 · 선물 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-05.webp" width="720" height="1280" alt="명란 원물, 검은색·금색 선물 포장, 음식과 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 05</span>
+                  <h4 id="case-title-05">명란 · 선물 구성</h4>
+                  <p>명란 제품과 선물 구성을 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 05 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>명란 단면·질감 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 05 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>명란을 활용한 조리나 플레이팅 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-07" data-case-index="7" aria-labelledby="case-title-07">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-07.webp" target="_blank" rel="noopener" aria-label="국·탕 · 간편식 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-07.webp" width="720" height="1280" alt="설렁탕·갈비탕 등 파우치 제품, 그릇, 냄비와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 07</span>
+                  <h4 id="case-title-07">국·탕 · 간편식 구성</h4>
+                  <p>국·탕 제품과 조리 세팅을 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 07 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>국물과 건더기 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 07 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>데우거나 그릇에 담는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-09" data-case-index="9" aria-labelledby="case-title-09">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-09.webp" target="_blank" rel="noopener" aria-label="명란 · 활용 요리 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-09.webp" width="720" height="1280" alt="흰색 명란 제품 패키지, 완성 요리와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 09</span>
+                  <h4 id="case-title-09">명란 · 활용 요리 구성</h4>
+                  <p>명란 제품과 활용 요리를 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 09 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>명란과 요리 단면 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 09 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>밥·달걀 요리 등에 활용하는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-15" data-case-index="15" aria-labelledby="case-title-15">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-15.webp" target="_blank" rel="noopener" aria-label="육류 · 함께 진행하는 방송 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-15.webp" width="720" height="1280" alt="앞치마를 입은 세 명과 육류, 프라이팬·버너" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 15</span>
+                  <h4 id="case-title-15">육류 · 함께 진행하는 방송</h4>
+                  <p>여러 출연자와 육류 제품을 함께 담은 방송 세팅</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 15 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>고기와 조리 결과 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 15 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>출연자가 함께 설명하거나 조리하는 장면</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-16" data-case-index="16" aria-labelledby="case-title-16">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-16.webp" target="_blank" rel="noopener" aria-label="떡·한과 · 선물과 조리 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-16.webp" width="800" height="1422" alt="송편·한과류, 선물 상자, 뚜껑 있는 팬과 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 16</span>
+                  <h4 id="case-title-16">떡·한과 · 선물과 조리 구성</h4>
+                  <p>떡과 한과, 선물 구성을 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 16 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>떡 단면과 한과 질감 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 16 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>데우기·담기 등 제공 방법 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            </div>
+          </div>
+          <div class="case-group" data-category-group="wellness" data-case-count="3">
+            <h3 class="case-group-heading">건강식품 <span>3개 사례</span></h3>
+            <div class="case-grid">
+            <article class="case-card" id="case-06" data-case-index="6" aria-labelledby="case-title-06">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-06.webp" target="_blank" rel="noopener" aria-label="비타민 C · 패키지와 스틱 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-06.webp" width="800" height="1422" alt="파란 비타민 C 패키지, 스틱 제품, 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 06</span>
+                  <h4 id="case-title-06">비타민 C · 패키지와 스틱</h4>
+                  <p>제품 패키지와 구성을 보여주는 비타민 C 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 06 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>스틱·내용물 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 06 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>포장을 열고 구성을 보여주는 설명 컷</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-02" data-case-index="2" aria-labelledby="case-title-02">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-02.webp" target="_blank" rel="noopener" aria-label="건강식품 · 여러 제품 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-02.webp" width="720" height="1280" alt="효소·프로바이오틱스 등 문구가 보이는 여러 제품 패키지와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 02</span>
+                  <h4 id="case-title-02">건강식품 · 여러 제품 구성</h4>
+                  <p>여러 종류의 제품 패키지를 함께 구성한 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 02 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>대표 제품 패키지·제형 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 02 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>제품별 구성과 섭취 방법을 보여주는 설명 컷</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            <article class="case-card" id="case-14" data-case-index="14" aria-labelledby="case-title-14">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-14.webp" target="_blank" rel="noopener" aria-label="비타민 등 · 제품 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-14.webp" width="720" height="1280" alt="비타민 C·D 등 글자가 보이는 패키지와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 14</span>
+                  <h4 id="case-title-14">비타민 등 · 제품 구성</h4>
+                  <p>비타민 등 제품 패키지를 함께 보여주는 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 14 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>대표 제품 포장·제형 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 14 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>제품 구성을 비교해 보여주는 설명 컷</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            </div>
+          </div>
+          <div class="case-group" data-category-group="beauty" data-case-count="1">
+            <h3 class="case-group-heading">화장품 <span>1개 사례</span></h3>
+            <div class="case-grid">
+            <article class="case-card" id="case-11" data-case-index="11" aria-labelledby="case-title-11">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-11.webp" target="_blank" rel="noopener" aria-label="크림·패치 · 스킨케어 구성 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-11.webp" width="800" height="1422" alt="크림 튜브, 패치 패키지, 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 11</span>
+                  <h4 id="case-title-11">크림·패치 · 스킨케어 구성</h4>
+                  <p>크림과 패치 제품을 함께 구성한 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 11 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>패키지와 제형·패치 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 11 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>사용 방법을 보여주는 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            </div>
+          </div>
+          <div class="case-group" data-category-group="daily" data-case-count="1">
+            <h3 class="case-group-heading">생활용품·바디케어 <span>1개 사례</span></h3>
+            <div class="case-grid">
+            <article class="case-card" id="case-08" data-case-index="8" aria-labelledby="case-title-08">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-08.webp" target="_blank" rel="noopener" aria-label="세제·헤어·바디 · 생활 제품 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-08.webp" width="720" height="1280" alt="세제, 헤어·바디케어 제품 패키지와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 08</span>
+                  <h4 id="case-title-08">세제·헤어·바디 · 생활 제품</h4>
+                  <p>여러 생활·바디케어 제품을 함께 구성한 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 08 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>대표 제품 제형·용기 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 08 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>대표 제품의 실제 사용 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            </div>
+          </div>
+          <div class="case-group" data-category-group="kitchen" data-case-count="1">
+            <h3 class="case-group-heading">주방용품 <span>1개 사례</span></h3>
+            <div class="case-grid">
+            <article class="case-card" id="case-13" data-case-index="13" aria-labelledby="case-title-13">
+              <figure class="case-current">
+                <a class="case-shot-link" href="assets/cases/case-13.webp" target="_blank" rel="noopener" aria-label="냄비·조리도구 · 주방 제품 사진 크게 보기, 새 창">
+                  <img src="assets/cases/case-13.webp" width="720" height="1280" alt="냄비, 휴대용 조리기구, 팬과 다지기 등 주방도구와 진행자" loading="lazy" decoding="async" />
+                  <span class="case-photo-badge">현재 사진 1장</span>
+                  <span class="case-zoom" aria-hidden="true">크게 보기 ↗</span>
+                </a>
+                <figcaption class="case-copy">
+                  <span class="case-id">CASE 13</span>
+                  <h4 id="case-title-13">냄비·조리도구 · 주방 제품</h4>
+                  <p>냄비와 여러 조리도구를 함께 구성한 방송</p>
+                </figcaption>
+              </figure>
+              <details class="case-planned">
+                <summary>추가 사진 2장 자리 보기 · 검토용</summary>
+                <div class="case-slot-grid">
+                    <div class="case-slot" aria-label="사례 13 추가 사진 1 자리">
+                      <span class="case-slot-number">PHOTO 02</span>
+                      <strong>도구 구조와 기능 부분 클로즈업</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                    <div class="case-slot" aria-label="사례 13 추가 사진 2 자리">
+                      <span class="case-slot-number">PHOTO 03</span>
+                      <strong>제품을 사용하는 실제 조리 시연</strong>
+                      <span class="case-slot-status">검토용·추가 촬영 예정</span>
+                    </div>
+                </div>
+              </details>
+            </article>
+            </div>
+          </div>
+        </div>
+        <p class="case-category-note">사진 속 가격·혜택·행사 문구는 촬영 당시의 내용입니다. 건강식품 분류는 사례를 찾기 위한 구분이며 개별 제품의 인증·효능을 뜻하지 않습니다.</p>
+      </div>
+      <script>
+        (() => {
+          const controls = document.getElementById('caseFilters');
+          const buttons = [...controls.querySelectorAll('button[data-category]')];
+          const groups = [...document.querySelectorAll('#case-groups [data-category-group]')];
+          const status = document.getElementById('caseResultCount');
+          buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+              const selected = button.dataset.category;
+              let count = 0;
+              groups.forEach((group) => {
+                const visible = selected === 'all' || group.dataset.categoryGroup === selected;
+                group.hidden = !visible;
+                if (visible) count += Number(group.dataset.caseCount);
+              });
+              buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+              const label = selected === 'all' ? '전체' : button.childNodes[0].textContent.trim();
+              status.textContent = label + ' ' + count + '개 사례';
+            });
+          });
+          controls.hidden = false;
+        })();
+      </script>
     </section>
 
     <section id="shift">
@@ -436,24 +1262,24 @@
         </div>
         <div class="photo-wall">
           <div class="photo-large">
-            <img src='live_bluemartin.jpg.png' alt='블루마틴 향수 라이브 연출' />
+            <img src='https://dmsrud3770-create.github.io/saimdang-ai/live_bluemartin.jpg.png' alt='블루마틴 향수 라이브 연출' />
             <div class="cap"><b>향수 브랜드 · 블루마틴</b><span>보이지 않는 향을 여름 색감과 투명 소품으로 표현</span></div>
           </div>
           <div class="photo-stack">
             <div class="photo-small">
-              <img src="live_nutrione.jpg.png" alt="Nutrione 건강식품 라이브 연출" />
+              <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_nutrione.jpg.png" alt="Nutrione 건강식품 라이브 연출" />
               <div class="cap"><b>뉴트리원 · BB LAB</b><span>과일·생활 루틴으로 성분을 신뢰감 있게 풀어낸 구성</span></div>
             </div>
             <div class="photo-small">
-              <img src="live_cono.jpg.jpg" alt="CONO STORY 생활용품 라이브 연출" />
+              <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_cono.jpg.jpg" alt="CONO STORY 생활용품 라이브 연출" />
               <div class="cap"><b>코노스토리</b><span>여름 사용 장면이 바로 떠오르도록 배치·컬러·동선 정리</span></div>
             </div>
             <div class="photo-small">
-              <img src="live_dermagen.jpg.png" alt="Dermagen 뷰티 라이브 연출" />
+              <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_dermagen.jpg.png" alt="Dermagen 뷰티 라이브 연출" />
               <div class="cap"><b>더마젠</b><span>제형감과 고급스러운 브랜드 이미지를 함께 보여준 뷰티 VMD</span></div>
             </div>
             <div class="photo-small">
-              <img src="live_grdc.jpg.png" alt="서사임당 LIVE 브랜드 연출 사례" />
+              <img src="https://dmsrud3770-create.github.io/saimdang-ai/live_grdc.jpg.png" alt="서사임당 LIVE 브랜드 연출 사례" />
               <div class="cap"><b>오감형 연출</b><span>브랜드별 맞춤 세팅</span></div>
             </div>
           </div>
@@ -469,70 +1295,70 @@
         </div>
         <div class="portfolio-grid">
           <article class="portfolio-card">
-            <div class="image"><img src='live_dermagen.jpg.png' alt='건강식품 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live_dermagen.jpg.png' alt='건강식품 연출' /></div>
             <div class="copy">
               <h3>더마젠 · 뷰티 VMD</h3>
               <p>피부에 닿는 제형감과 브랜드의 고급스러운 이미지를 함께 보여주기 위한 뷰티 VMD 구성. 화면에서 사용감이 이해되도록 설계했습니다.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live_bluemartin.jpg.png' alt='향수 뷰티 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live_bluemartin.jpg.png' alt='향수 뷰티 연출' /></div>
             <div class="copy">
               <h3>블루마틴 · 향수 라이브</h3>
               <p>보이지 않는 향을 여름의 색감, 투명한 소품, 첫인상 중심의 말 순서로 표현한 향수 라이브 세팅.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live_cono.jpg.jpg' alt='생활용품 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live_cono.jpg.jpg' alt='생활용품 연출' /></div>
             <div class="copy">
               <h3>코노스토리 · 생활용품 라이브</h3>
               <p>여름철 사용 장면이 바로 떠오르도록 제품 배치, 컬러, 시연 동선을 정리한 생활용품 라이브 세팅.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live_nutrione.jpg.png' alt='뉴트리원 건강식품 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live_nutrione.jpg.png' alt='뉴트리원 건강식품 연출' /></div>
             <div class="copy">
               <h3>뉴트리원 BB LAB · 건강식품 라이브</h3>
               <p>건강기능식품의 성분을 어렵게 설명하지 않고, 과일과 생활 루틴을 활용해 신뢰감 있게 풀어낸 라이브 구성.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live_grdc.jpg.png' alt='구름달옥수수 농산물 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live_grdc.jpg.png' alt='구름달옥수수 농산물 연출' /></div>
             <div class="copy">
               <h3>구름달옥수수 · 산지 농산물 라이브</h3>
               <p>강원도 해발 700고지 옥수수의 찰기, 수분감, 달큰한 맛이 화면에서 전달되도록 구성한 농산물 라이브.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live.lalamarket.jpg.png' alt='라라마켓 신선한 곡물 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live.lalamarket.jpg.png' alt='라라마켓 신선한 곡물 연출' /></div>
             <div class="copy">
               <h3>라라마켓 · 신선 곡물 라이브</h3>
               <p>곡물의 색, 입자, 건강한 식탁 이미지를 살려 신선함과 정직함이 화면에서 먼저 보이도록 연출.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live.orgarbonbaby.jpg.png' alt='오가본 신생아 로션 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live.orgarbonbaby.jpg.png' alt='오가본 신생아 로션 연출' /></div>
             <div class="copy">
               <h3>오가본 · 신생아 로션 라이브</h3>
               <p>신생아 제품의 부드러움과 안심 이미지를 밝은 톤, 포근한 소재, 엄마의 사용 장면 중심으로 구성.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live.playclean.jpg.png' alt='플레이클린 세제 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live.playclean.jpg.png' alt='플레이클린 세제 연출' /></div>
             <div class="copy">
               <h3>플레이클린 · 세제 라이브</h3>
               <p>깨끗함이 말보다 먼저 보이도록 사용 장면, 전후 이미지, 산뜻한 컬러를 중심으로 연출.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live.recipebox.jpg.png' alt='레시피박스 캡슐세제 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live.recipebox.jpg.png' alt='레시피박스 캡슐세제 연출' /></div>
             <div class="copy">
               <h3>레시피박스 · 캡슐세제 라이브</h3>
               <p>향과 세정력을 직접 맡을 수 없는 제품 특성을 파스텔 컬러와 사용 장면으로 풀어낸 생활용품 라이브 구성.</p>
             </div>
           </article>
           <article class="portfolio-card">
-            <div class="image"><img src='live.recipebox-kidsday.jpg.png' alt='레시피박스 어린이날 연출' /></div>
+            <div class="image"><img src='https://dmsrud3770-create.github.io/saimdang-ai/live.recipebox-kidsday.jpg.png' alt='레시피박스 어린이날 연출' /></div>
             <div class="copy">
               <h3>레시피박스 · 어린이 전용 화장품 라이브</h3>
               <p>어린이날 기획 라이브로 키즈 전용 화장품의 사랑스러운 이미지를 밝고 생동감 있는 세팅으로 구성. 아이와 부모 모두를 고려한 사용 장면 중심 연출.</p>
@@ -792,8 +1618,8 @@
     <div class="wrap grid-2" style="align-items:center">
       <div>
         <div class="kicker" style="color:var(--mustard2)">Contact</div>
-        <h2>브랜드마다 팔리는 이유는 다릅니다.<br/>서사임당 LIVE는 그 이유가 화면에서 보이도록 설계합니다.</h2>
-        <p class="desc">박람회에서 명함을 받으셨거나 라이브 진행, 정기 방송, 기관 협업이 필요하시다면 상품명과 희망 플랫폼만 남겨주세요.<br/>브랜드 상황에 맞는 진행 방식과 예상 견적을 안내드립니다.</p>
+        <h2>우리 상품은 어떻게 방송하면 좋을까요?</h2>
+        <p class="desc">상품명과 희망 플랫폼을 알려주세요.<br/>상품에 맞는 진행 방식과 예상 견적을 안내드립니다.</p>
       </div>
       <div class="card" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:var(--ivory)">
         <h3>서사임당 LIVE</h3>
